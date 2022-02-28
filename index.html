@@ -1,0 +1,38 @@
+<h1>hello</h1>
+
+<div class="circle">
+</div>
+
+<style>
+h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: Helvetica, sans-serif;
+  width: 100vw;
+  line-height: 100vh;
+  color: rgb(50,0,225);
+}
+
+.circle {
+  width: 75px;
+  height: 75px;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: luminosity;
+}
+</style>
+
+<script>
+var circle = document.querySelector('.circle');
+
+window.addEventListener("mousemove", event => {
+  var y = event.clientY;
+  var x = event.clientX;
+  circle.style.top = y+"px";
+  circle.style.left = x+"px";
+});
+</script>
